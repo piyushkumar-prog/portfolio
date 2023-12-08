@@ -318,13 +318,13 @@ nav .fa-solid{
         height: 3px;
         background: rgb(45, 45, 240);
         position: absolute;
-        left: 90px;
+        left: 40px;
         top: 120px;
         transition: 0.2s;
     }
     
     .header-text p:hover::after{
-        width:30%;
+        width:40%;
     }
     
     .header-text h1 span::after{
