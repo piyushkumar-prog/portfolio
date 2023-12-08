@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piyush Kumar portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300&family=Kanit:ital,wght@1,300&family=Michroma&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu" >
+                    <li><a href=#header>Home</a></li>
+                    <li><a href=#about>About</a></li>
+                    <li><a href=#skills>Skills</a></li>
+                    <li><a href=#projects>Projects</a></li>
+                    <li><a href=#certificates>Certificates</a></li>
+                    <li><a href=#contact>Contact</a></li>
+                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Front-End Developer</p>
+                <h1>Hi,I'm <span>Piyush Kumar</span></h1>
+           </div>
+        </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img class="img1" src="myimage.png">
+                </div>
+                <div class="about-col-2">
+                    <pre class="sub-title">About me</pre>
+                    <p class="about-text">I'm a first year student pursuing Bachelors's in Computer Science from AKTU University. I'm a passionate learner who's always willing to learn and work across technologies and domains.I love to explore new technologies and leverage them to solve real-life problems.I'm currently into Web Development.</p>
+                    </br>
+                    </br>
+                    <div id="skills" class="tab-titles">
+                        <p>Skills</p>
+                    </div>
+                    <div class="tab-content">
+                        <ul>
+                            <li><img src="html-logo.png" class="img2"> <span>HTML</span></li>
+                            <li><img src="csslogo.png" class="img3"> <span>CSS</span></li>
+                            <li><img src="js-logo.png" class="img2"> <span>Java Script</span></li>
+                            <li><img src="python-logo.png" class="img2"> <span>Python</span></li>
+                            <li><img src="mysql-logo1.png" class="img3"> <span>MySQL</span></li>
+
+                        </ul>
+                    </div>
+                    </br>
+                    <div id="projects" class="tab-titles">
+                        <p>Projects</p>
+                    </div>
+                    <div class="tab-content">
+                        <ul>
+                            <li><i class="fa-solid fa-link"></i><a href="https://github.com/piyushkumar-prog/Netflix-clone"><span>Netflix Home Page Clone</span></a></li>
+                            <li><i class="fa-solid fa-link"></i><a href="https://github.com/piyushkumar-prog/Sign-up-page"><span>Sign Up Page</span></a></li>
+                            <li><i class="fa-solid fa-link"></i><a href="https://github.com/piyushkumar-prog/Bank-Management-System"><span>Bank Management System using Python</span></a></li>
+                    </div>
+                    </br>
+                    </br>
+                    <div id="certificates" class="tab-titles">
+                        <p>Certificates</p>
+                    </div>
+                    <div class="tab-content">
+                        <ul>
+                            <li><i class="fa-solid fa-link"></i><a href="https://www.coursera.org/account/accomplishments/verify/BJDU7GJZHNX7"><span>Introduction to Front-End Development by META</span></a></li>
+
+            </div>
+        </div>
+    </div>
+    </br>
+    </br>
+    <div id="contact" class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i><span>piyushkumar.prog@gmail.com</span></p>
+                    <div class="social-icons">
+                        <a href="https://github.com/piyushkumar-prog"><i class="fa-brands fa-github"></i> </a>
+                        <a href="https://www.linkedin.com/in/piyush-kumar-prog"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+    
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="https://kit.fontawesome.com/c9fb692552.js" crossorigin="anonymous"></script>
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzVVrZA0EyFkIGgxER5HxUrKwQRrzYt5foRd0Nxfipjf50OvQm8u-yCmRZ37ssIwEMGpQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent Succefully!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</html>
