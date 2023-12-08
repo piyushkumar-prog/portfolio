@@ -79,7 +79,7 @@ nav ul li a:hover::after{
     content:'';
     width:0;
     height: 3px;
-    background: rgb(45, 45, 240);
+    background: rgb(75, 75, 240);
     position: absolute;
     left: 118px;
     top: 280px;
@@ -303,13 +303,43 @@ nav .fa-solid{
 @media only screen and (max-width:600px){
 
     .header-text h1{
-        font-size:25px;
+        font-size:20px;
         margin-top:20px;
         
     }
     .header-text p{
-        font-size:20px;
+        font-size:15px;
         
+    }
+
+    .header-text p::after{
+        content:'';
+        width:0;
+        height: 3px;
+        background: rgb(45, 45, 240);
+        position: absolute;
+        left: 90px;
+        top: 120px;
+        transition: 0.2s;
+    }
+    
+    .header-text p:hover::after{
+        width:30%;
+    }
+    
+    .header-text h1 span::after{
+        content:'';
+        width:0;
+        height: 3px;
+        background:white;
+        position: absolute;
+        left: 110px;
+        top: 170px;
+        transition: 0.2s;
+    }
+    
+    .header-text h1 span:hover::after{
+        width:45%;
     }
 
     nav .fa-regular{
@@ -349,6 +379,13 @@ nav .fa-solid{
     .img1{
         height:20vh;
         width:20vh;
+     }
+
+     .img1:hover{
+        transform: translateY(5px);
+        height: 22vh;
+        width: 22vh;
+    
      }
      .subtitle{
         font-size: 25px;
