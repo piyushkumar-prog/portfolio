@@ -81,13 +81,13 @@ nav ul li a:hover::after{
     height: 3px;
     background: rgb(75, 75, 240);
     position: absolute;
-    left: 118px;
-    top: 280px;
+    left: 130px;
+    top: 300px;
     transition: 0.2s;
 }
 
 .header-text p:hover::after{
-    width:30%;
+    width:25%;
 }
 .header-text h1 span{
     color:rgb(75, 75, 240);
@@ -100,13 +100,13 @@ nav ul li a:hover::after{
     height: 3px;
     background:white;
     position: absolute;
-    left: 332px;
-    top: 380px;
+    left: 335px;
+    top: 405px;
     transition: 0.2s;
 }
 
 .header-text h1 span:hover::after{
-    width:45%;
+    width:40%;
 }
  /* about*/
 
