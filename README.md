@@ -9,11 +9,12 @@ HTML
 CSS
 JavaScript
 
-# Installation:
+# Screenshots:
+![Screenshot](https://github.com/piyushkumar-prog/portfolio/blob/main/screenshot-1.png)
+![Screenshot](https://github.com/piyushkumar-prog/portfolio/blob/main/screenshot-2.png)
+![Screenshot](https://github.com/piyushkumar-prog/portfolio/blob/main/screenshot-3.png)
 
-There are no specific installation instructions required for this portfolio website. You can simply clone the repository and open the index.html file in a web browser to view the website or visit the website from link given below.
-
-Portfolio Website Link: 
+### Portfolio Website Link: 
 
 https://piyushkumar-prog.github.io/portfolio/
 
